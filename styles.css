@@ -54,3 +54,30 @@ body {
     font-weight: 300;
 
 }
+
+/* ----------Genre Section-------------- */
+.genre-section{
+    width: 100%;
+    background-color: transparent;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px ;
+
+}
+.genre-name h1{
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+.genre-img-section
+{
+    display: flex;
+    gap: 20px;
+}
+.genre-movie-img{
+    width: 25em;
+    border-radius: 8px;
+}
