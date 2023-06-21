@@ -7,6 +7,7 @@ const imageEndPoint = "https://image.tmdb.org/t/p/w500";
 // https://image.tmdb.org/t/p/w500/6l1SV3CWkbbe0DcAK1lyOG8aZ4K.jpg?api_key=db1c93f3be764232ea2c94613fb41c24
 // https://api.themoviedb.org/3/discover/movie?api_key=db1c93f3be764232ea2c94613fb41c24&with_genre=28
 
+
 // Object containing all paths to be used
 const apiPaths = {
   fetchAllCategories: `${apiEndPoint}/genre/movie/list?api_key=${apiKey}`,
@@ -14,6 +15,7 @@ const apiPaths = {
     `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${genreID}`,
   fetchMovieImage: (imagePath) => `${imageEndPoint}${imagePath}`,
 };
+
 
 //-------------------Loading of application-----------------------
 
@@ -28,7 +30,7 @@ function fetchAndBuildCategories() {
     .then((res) => {
       const categories = res.genres; // extracting genres array from the returned onject
       if (Array.isArray(categories) && categories.length) {
-        categories.slice(0, 3).forEach((category) => {   // sending object of genre_name and genre_id
+        categories.slice(0, 6).forEach((category) => {   // sending object of genre_name and genre_id
           fetchAndBuildOneCategory(category);
         });
       }
@@ -57,9 +59,9 @@ function fetchAndBuildOneCategory(categories) {
 function movieSectionBuilder(moviesInCategory, category_name) {
 
     const movieGenreSection= document.getElementById('genre-section-area'); // final section where we will add
-    
+    console.table(moviesInCategory);
     const movieImageSection=moviesInCategory.map((movie)=>{
-        return `<img src="${apiPaths.fetchMovieImage(movie.backdrop_path)}" alt="fast-x" class="genre-movie-img"/>`;
+        return `<img src="${apiPaths.fetchMovieImage(movie.backdrop_path)}" alt="fast-x" class="genre-movie-img"  draggable="false"/>`;
     }).join('');
     const movieSectionHTML= `
     

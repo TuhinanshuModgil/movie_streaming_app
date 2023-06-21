@@ -64,11 +64,14 @@ body {
     padding: 20px ;
 
 }
+.genre-name{
+    margin-bottom: 20px;
+}
 .genre-name h1{
     color: white;
     font-weight: 300;
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -76,6 +79,14 @@ body {
 {
     display: flex;
     gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y:visible;
+}
+
+/* used to remove scroll bar you need to check the viablility of webkit with your browser as it may not allow */
+*::-webkit-scrollbar{ 
+    display: none;
 }
 .genre-movie-img{
     width: 25em;
