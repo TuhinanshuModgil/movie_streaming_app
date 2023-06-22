@@ -1,0 +1,66 @@
+/* --------------Banner Section--------------- */
+.banner-container{
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner-container-inner{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:720px;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
+    
+}
+.banner-title, .banner-discription{
+    color: rgb(255, 255, 255);
+    
+}
+
+.banner-title{
+    margin-bottom: 30px;
+    font-size: 60px;
+    max-width: 20ch;
+    z-index: 20;
+}
+.banner-buttons{
+    z-index: 20;
+}
+.banner-discription{
+    margin-bottom: 30px;
+    max-width: 60ch;
+    z-index: 20;
+}
+.banner-buttons button{
+    border: none;
+    padding: 15px 25px ;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+.side-gradient{
+    background: linear-gradient(0.25turn,rgba(0, 0, 0, 0.7 ),transparent);
+    width: 50%;
+    height: 100%;
+    left: 0;
+
+    
+    position: absolute;
+}
+.banner-bottom-gradient{
+    height: 120px;
+    background: linear-gradient(0.5turn,transparent,rgba(70, 0, 0, 0.87));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
