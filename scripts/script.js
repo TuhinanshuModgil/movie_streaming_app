@@ -130,6 +130,17 @@ function movieSectionBuilder(moviesInCategory, category_name) {
 
 window.addEventListener("load", () => {
   init();
+  addEventListener('scroll', ()=>{
+    const header = document.getElementById('header');
+    if (window.scrollY>5)
+    {
+      header.classList.add('scrolled');
+    }
+    else
+    {
+      header.classList.remove('scrolled');
+    } 
+  })
 });
 
 

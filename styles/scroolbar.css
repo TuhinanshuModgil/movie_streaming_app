@@ -14,7 +14,7 @@
     
     background: rgb(95, 13, 13);
     border-radius: 10px;
-    transition: ease-in 20s;
+    transition: background ease-in 20s;
   }
   
   /* Handle on hover */
